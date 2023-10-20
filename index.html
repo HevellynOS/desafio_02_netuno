@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Netuno-02</title>
+</head>
+<body>
+   <header class="top-bar">
+    <img class="logo" src="assets/logo.png" alt="">
+    <nav>
+        <ul>
+            <li><a href="">O Projeto</a></li>
+            <li><a href="">O Problema</a></li>
+            <li><a href="">Sua Jornada</a></li>
+            <li><a href="">Objetivos</a></li>
+        </ul>
+    </nav>
+    <button>Processo Seletivo</button>
+   </header>
+   <main> 
+    <div class="vector2">-</div>
+    <section id="form-section">
+        <img class="banner" src="assets/bannertopo.png" alt="">
+            <form id="cad" action="" method="post">
+                <div class="input-container">
+                    <h1>Formulário de Cadastro</h1>
+                    <h2>Preencha seus dados</h2>
+                    <input required class="nome" type="text" placeholder="Nome completo*">
+                    <input required class="email" type="email" placeholder="E-mail*">
+                    <select required class="estado" name="estado" id="estado">
+                        <option value="">Estado*</option>
+                    </select>
+                </div>
+                <article class="checkbox-container">
+                    <h2>Conhecimento de Programação</h2>
+                    <div class="checkbox-container-checks">
+                        <div>
+                            <input type="checkbox" id="html">
+                            <label for="html">HTML</label>
+                            <input type="checkbox" id="css">
+                            <label for="css">CSS</label>
+                            <input type="checkbox" id="javascript">
+                            <label for="javascript">Javascript</label>
+                            <input type="checkbox" id="php">
+                            <label for="php">PHP</label>
+                        </div>
+                        <div>
+                            <input class="checkbox" type="checkbox" id="net">
+                            <label for="net">.NET</label>
+                            <input type="checkbox" id="vuejs">
+                            <label for="vuejs">Vue.JS</label>
+                            <input type="checkbox" id="reactjs">
+                            <label for="reactjs">ReactJS</label>
+                            <input type="checkbox" id="reactnative">
+                            <label for="reactnative">React</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="node">
+                            <label for="node">Node</label>
+                            <input type="checkbox" id="python">
+                            <label for="python">Python</label>
+                            <input type="checkbox" id="flutter">
+                            <label for="flutter">Flutter</label>
+                            <input type="checkbox" id="outras">
+                            <label for="outras">Outras</label>
+                        </div>
+                    </div>
+                </article>
+            
+                <div class="check-container">
+                    <h2>Já trabalhou com desenvolvimento?</h2>
+                    <div>
+                        <input type="checkbox" id="negativo">
+                        <label for="negativo">Não</label>
+                        <input type="checkbox" id="positivo">
+                        <label for="positivo">Sim</label>
+                    </div>
+                <hr>
+                <h3>(*) Campos obrigatórios</h3>
+                <button>Enviar</button>
+                <p>Ao clicar em enviar, você concorda com todos os termos de uso de dados descritos em <strong>politica de privacidade</strong> </p>
+            </div>
+        </form>
+        <figure><img class="vetor" src="assets/Elements/Vector.png" alt=""></figure>
+    </section>
+   </main>
+
+    
+</body>
+    <script src="script.js"></script>
+</html>

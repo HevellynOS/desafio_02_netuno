@@ -1,0 +1,299 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+
+:root{
+    --blue: #1A7FBD;
+    --blue-light: #94cbee;
+    --black: #000;
+    --black-light: #00000070;
+    --white: #FFF;
+    --grey: #b6b0b0ea;
+    --grey-light:#f8f6f6ea;
+
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--blue);
+}
+html{
+    font-size: 62%;
+}
+.vector2{
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, #FFF 26.56%, #FFF 63.54%, rgba(255, 255, 255, 0.00) 100%);
+    margin-bottom: 50px;
+}
+.top-bar{
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+    align-items: center;
+    border-bottom: var(--white);
+}
+.logo{
+    width: 20rem;
+}
+.top-bar > nav > ul, li, a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    color: var(--white);
+    text-decoration: none;
+    gap: 3rem;
+
+}
+.top-bar > nav > ul, li, a:hover{
+   color: var(--blue-light);
+   transition: 1s;
+
+}
+.top-bar > button {
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 700;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.top-bar > button:hover {
+    cursor: pointer;
+    background-color: var(--black-light);
+    transition: 1s;
+
+}
+
+#form-section{
+    display: flex;
+    background-color: var(--blue);
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 10vh);
+    justify-content: space-between;
+
+    
+}
+.banner{
+    width: 50%;
+    height: 100vh;
+   position: relative;
+   right: 100px;
+   z-index: 0;
+
+}
+
+
+#cad{
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+
+}
+
+.vetor{ 
+ position: relative;
+ top: 310px;
+}
+.test{
+    background-color: red;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px ;
+    gap: 20px;
+    
+   
+
+}
+#cad h1 {
+    font-size: 2rem;
+    color: var(--grey);
+}
+
+h2 {
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+input{
+    height: 7vh;
+    display: flex;
+    font-weight: lighter;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--grey-light);
+    padding-left: 30px;
+}
+.nome{
+    background-position: 10px;
+    background-image: url(assets/icones/user.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+
+}
+.email{
+    background-position: 10px;
+    background-image: url(assets/icones/mail.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+select {
+    height: 7vh;
+    display: flex;
+    font-weight: lighter;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--grey-light);
+    padding-left: 30px;
+}
+.estado{
+    background-position: 10px;
+    background-image: url(assets/icones/state.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+.checkbox-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+   
+}
+.checkbox-container > h2{
+    color: var(--white);
+       
+}
+.checkbox-container-checks > div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 8rem;
+}
+.checkbox-container-checks{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+label {
+    color: var(--white);
+}
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label {
+    cursor: pointer;
+    display: flex;
+    font: 400 10px Arial;
+    width: 15px;
+    height: 15px;
+    text-indent: 20px;
+    border: solid 1px var(--white);
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+input[type=checkbox] + label::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: var(--red);
+}
+
+input[type=checkbox]:checked + label::before {
+    background-color: var(--white);
+}
+
+
+.check-container > div > input[type=checkbox] + label {
+    border: solid 1px var(--blue);
+}
+.check-container > div > label {
+    color: var(--grey);
+}
+.check-container > div  {
+    display: flex;
+    gap: 50px;
+    margin: 10px 0 10px 0;
+
+}
+.check-container{
+    padding: 20px;
+
+   
+}
+h3{
+    text-align: center;
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin-top: 10px;
+
+}
+.check-container > button {
+    width: 100%;
+    height: 4vh;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+
+}
+
+.check-container > button:hover {
+    background: linear-gradient(90deg, var(--blue), var(--white), var(--blue));
+    color: var(--blue);
+    transition: 1s;
+}
+
+.check-container > p {
+    color: var(--grey);
+    font-size: 1.3rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.check-container > p > strong {
+    color: var(--blue);
+    cursor:pointer;
+}
+  
+@media (max-width: 870px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 630px){
+    html{
+        font-size: 30%;
+    }
+}
+
+@media (max-width: 510px){
+    .top-bar > nav > ul, li, a{
+        display: none;
+    }
+}
