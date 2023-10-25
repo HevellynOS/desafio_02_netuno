@@ -14,8 +14,8 @@
     <img class="logo" src="assets/logo.png" alt="">
     <nav>
         <ul>
-            <li><a href="">O Projeto</a></li>
-            <li><a href="">O Problema</a></li>
+            <li><a href="#project-section">O Projeto</a></li>
+            <li><a href="#problem-section">O Problema</a></li>
             <li><a href="">Sua Jornada</a></li>
             <li><a href="">Objetivos</a></li>
         </ul>
@@ -24,73 +24,252 @@
    </header>
    <main> 
     <div class="vector2">-</div>
+    
     <section id="form-section">
         <img class="banner" src="assets/bannertopo.png" alt="">
-            <form id="cad" action="" method="post">
-                <div class="input-container">
-                    <h1>Formulário de Cadastro</h1>
-                    <h2>Preencha seus dados</h2>
-                    <input required class="nome" type="text" placeholder="Nome completo*">
-                    <input required class="email" type="email" placeholder="E-mail*">
-                    <select required class="estado" name="estado" id="estado">
-                        <option value="">Estado*</option>
-                    </select>
-                </div>
-                <article class="checkbox-container">
-                    <h2>Conhecimento de Programação</h2>
-                    <div class="checkbox-container-checks">
-                        <div>
-                            <input type="checkbox" id="html">
-                            <label for="html">HTML</label>
-                            <input type="checkbox" id="css">
-                            <label for="css">CSS</label>
-                            <input type="checkbox" id="javascript">
-                            <label for="javascript">Javascript</label>
-                            <input type="checkbox" id="php">
-                            <label for="php">PHP</label>
-                        </div>
-                        <div>
-                            <input class="checkbox" type="checkbox" id="net">
-                            <label for="net">.NET</label>
-                            <input type="checkbox" id="vuejs">
-                            <label for="vuejs">Vue.JS</label>
-                            <input type="checkbox" id="reactjs">
-                            <label for="reactjs">ReactJS</label>
-                            <input type="checkbox" id="reactnative">
-                            <label for="reactnative">React</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="node">
-                            <label for="node">Node</label>
-                            <input type="checkbox" id="python">
-                            <label for="python">Python</label>
-                            <input type="checkbox" id="flutter">
-                            <label for="flutter">Flutter</label>
-                            <input type="checkbox" id="outras">
-                            <label for="outras">Outras</label>
-                        </div>
+        <div class="form-container">
+            <div>
+                <form id="cad" action="" method="post">
+                    <div class="input-container">
+                        <h1>Formulário de Cadastro</h1>
+                        <h2>Preencha seus dados</h2>
+                        <input required class="nome" type="text" placeholder="Nome completo*">
+                        <input required class="email" type="email" placeholder="E-mail*">
+                        <select required class="estado" name="estado" id="estado">
+                            <option value="">Estado*</option>
+                        </select>
                     </div>
-                </article>
-            
-                <div class="check-container">
-                    <h2>Já trabalhou com desenvolvimento?</h2>
-                    <div>
-                        <input type="checkbox" id="negativo">
-                        <label for="negativo">Não</label>
-                        <input type="checkbox" id="positivo">
-                        <label for="positivo">Sim</label>
+                    <article class="checkbox-container">
+                        <h2>Conhecimento de Programação</h2>
+                        <div class="checkbox-container-checks">
+                            <div>
+                                <input type="checkbox" id="html">
+                                <label for="html">HTML</label>
+                                <input type="checkbox" id="css">
+                                <label for="css">CSS</label>
+                                <input type="checkbox" id="javascript">
+                                <label for="javascript">Javascript</label>
+                                <input type="checkbox" id="php">
+                                <label for="php">PHP</label>
+                            </div>
+                            <div>
+                                <input class="checkbox" type="checkbox" id="net">
+                                <label for="net">.NET</label>
+                                <input type="checkbox" id="vuejs">
+                                <label for="vuejs">Vue.JS</label>
+                                <input type="checkbox" id="reactjs">
+                                <label for="reactjs">ReactJS</label>
+                                <input type="checkbox" id="reactnative">
+                                <label for="reactnative">React</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="node">
+                                <label for="node">Node</label>
+                                <input type="checkbox" id="python">
+                                <label for="python">Python</label>
+                                <input type="checkbox" id="flutter">
+                                <label for="flutter">Flutter</label>
+                                <input type="checkbox" id="outras">
+                                <label for="outras">Outras</label>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="check-container">
+                        <h2>Já trabalhou com desenvolvimento?</h2>
+                        <div>
+                            <input type="checkbox" id="negativo">
+                            <label for="negativo">Não</label>
+                            <input type="checkbox" id="positivo">
+                            <label for="positivo">Sim</label>
+                        </div>
+                    <hr>
+                    <h3>(*) Campos obrigatórios</h3>
+                    <button>Enviar</button>
+                    <p>Ao clicar em enviar, você concorda com todos os termos de uso de dados descritos em <strong>politica de privacidade</strong> </p>
                     </div>
-                <hr>
-                <h3>(*) Campos obrigatórios</h3>
-                <button>Enviar</button>
-                <p>Ao clicar em enviar, você concorda com todos os termos de uso de dados descritos em <strong>politica de privacidade</strong> </p>
+                </form>
+                <img class="vetor" src="assets/Elements/Vector.png" alt="">
             </div>
-        </form>
-        <figure><img class="vetor" src="assets/Elements/Vector.png" alt=""></figure>
+        </div>
+    </section>
+    <section id="project-section">
+            <img class="img-projeto" src="assets/dev.png" alt="">
+            <article>
+                <h1>O Projeto</h1>
+                <p>Com o “novo normal” causado pela pandemia dos últimos anos, 
+                    mais empresas no mundo todo têm aberto oportunidades no modelo Home Office. 
+                    Alinhado a depreciação da moeda local, 
+                    temos um alto índice de profissionais migrando para trabalhos em outros países. 
+                   <br><br> O projeto Netuno, idealizado pela Fasters, tem por objetivo reduzir os estresses causados por recrutamento e turn over na área de tecnologia, 
+                    bem como gerar oportunidades de carreira para novos profissionais.
+                </p>
+            </article>
+    </section>
+    <section id="problem-section">
+        <div class="problem-container">
+            <img src="assets/Container2.png" alt="">
+            <article>
+                <h1>O Problema</h1>
+                <p>Falta de profissionais de TI no Mercado brasileiro: um problema que demanda atenção urgente.
+                </p>
+
+                <hr>
+                <p>Estima-se que atualmente tenhamos um déficit de 408 mil postos de trabalho, com perdas se acumulando na casa dos R$167 bilhões, de acordo com a Softex, uma organização social voltada ao fomento da área de TI.
+                    <br><br>
+                    <strong>Um dos principais fatores dessa falta de profissionais é o êxodo de profissionais para o exterior.</strong>
+                </p>
+            </article>
+        </div>
+        <div class="card-container-top">
+            <div class="card-container">
+                <div class="card">
+                    <h2> Oportunidade </h2>
+                    <p>Acreditamos que a combinação de interesse, dedicação e oportunidade pode causar um grande impacto nas pessoas, nas organizações e no mundo.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2> Comunidade </h2>
+                    <p>Dentro de um grupo de pessoas mais experientes e acessíveis, a curva de aprendizado ocorre de forma mais rápida, fluída e eficiente.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2> Experiencia Real </h2>
+                    <p>Entendemos que somente as experiências reais poderão trazer a bagagem que a teoria não o pode fazer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section id="jorney-section"> 
+        <header>
+            <div>
+                <img src="assets/Elements/Line 5.png" alt="">
+                <img src="assets/Elements/Line 5.png" alt="">
+            </div>
+            <h1>Sua Jornada</h1>
+            <div>
+                <img src="assets/Elements/Line 11.png" alt="">
+                <img src="assets/Elements/Line 11.png" alt="">
+            </div>
+        </header>
+        <ul class="cards-jorney-container">
+            <li>
+                <figure>
+                    <img src="assets/icones/calendario.png" alt="">
+                    <figcaption>
+                        Programas de 4 meses de duração, sendo 6 horas/dia.
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/icones/home.png" alt="">
+                    <figcaption>Mentoria individual e coletiva em padrão ágil.</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/icones/medalha.png" alt="">
+                    <figcaption>
+                        Do Zero ao Junior Promissor em 4 meses.
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/icones/group.png" alt="">
+                    <figcaption>
+                        100% Home Office com plataformas de cursos online.
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/icones/relogio.png" alt="">
+                    <figcaption>
+                        640 horas de aplicação prática dos conceitos.
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assets/icones/target.png" alt="">
+                    <figcaption>Variedade de áreas dentro da tecnologia.
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+        <button>
+            Quero me cadastrar para o <strong> Processo Seletivo</strong>
+            <img src="assets/Elements/arrow.png" alt="">
+        </button>
+        <img src="assets/Elements/Vector1.png" alt="">
+    </section>
+    <section id="goals-section">
+        <img src="assets/Elements/Group 65.png" alt="">
+            <article>
+                <h1>Objetivos</h1>
+                <div class="card-container">
+                    <div class="card">
+                        <h2> Otimizar </h2>
+                        <p>
+                            Otimizar todo processo de contratação chegando a contribuir com uma economia de 40% no processo de recrutamento.                </p>
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h2> Gerar </h2>
+                        <p>
+                            Gerar novas oportunidades de carreira para pessoas interessadas em ingressar na área ou migrar de outras áreas que esteja descontente.                </p>
+                    </div>
+                    <div class="card">
+                        <h2> Filtrar </h2>
+                        <p>
+                            Criar oportunidades brilhantes para profissionais que se destacarem junto a parceiros estratégicos de negócios.                </p>
+                    </div>
+            </article>
+        </div>
+        <img src="assets/Elements/Group 65 (1).png" alt="">
     </section>
    </main>
-
-    
+   <footer>
+        <div class="footer-container">
+            <div class="links">
+                <img src="assets/logo+slogan.png" alt="">
+                <ul>
+                    <li>
+                        <img src="assets/icones/fb.png" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/icones/ig.png" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/icones/in.png" alt="">
+                    </li>
+                </ul>
+                <p>
+                    Netuno© 2022 - Todos os direitos reservados
+                </p>
+            </div>
+            <button> Processo Seletivo </button>
+            <nav>
+                <ul>
+                    <li><a href="">O Projeto</a></li>
+                    <li><a href="">O Problema</a></li>
+                    <li><a href="">Sua Jornada</a></li>
+                    <li><a href="">Objetivos</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <div class="contatos">
+                <h3>Contato</h3>
+                <p><a href="">11 91234.5678</a></p>
+                <p><a href="">contato@netuno.com.br</a></p>
+            </div>
+        </div>
+   </footer>
 </body>
     <script src="script.js"></script>
 </html>
+
+
