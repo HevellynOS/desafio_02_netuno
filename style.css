@@ -31,6 +31,7 @@ body{
 html{
     font-size: 62%;
     scroll-behavior: smooth;
+    width: 100%;
 }
 .vector2{
     position: relative;
@@ -199,6 +200,7 @@ select {
     background-size: 15px;
 }
 .checkbox-container{
+    
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -207,27 +209,30 @@ select {
     padding: 1rem;
     position: relative;
    
+
+
+   
 }
 .checkbox-container > h2{
     color: var(--white);
        
 }
-.checkbox-container-checks > div{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-    gap: 100%;
-    justify-content: space-between;
-}
+
 .checkbox-container-checks{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-    align-items: flex-start;
-   
+    justify-content: space-between;
+
+}
+.checkbox-container-checks > div{
+    width: 100%;
+
 }
 label {
     color: var(--white);
+    font-weight: 900;
+
 }
 input[type=checkbox] {
     display: none;
@@ -236,12 +241,13 @@ input[type=checkbox] {
 input[type=checkbox] + label {
     cursor: pointer;
     display: flex;
-    font: 400 1rem Arial;
+    font: 400 1.3rem Arial;
     width: 1.5rem;
     height: 1.5rem;
     text-indent: 20px;
     border: solid 1px var(--white);
     border-radius: 5px;
+    position: relative;
 }
 
 input[type=checkbox] + label::before {
@@ -249,13 +255,20 @@ input[type=checkbox] + label::before {
     display: inline-block;
     width: 9px;
     height: 9px;
-    background-color: var(--red);
+    background-color: transparent;
+    border: solid 1px var(--red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
+
 
 input[type=checkbox]:checked + label::before {
     background-color: var(--white);
+    border-radius: 2px;
 }
-
 
 .check-container > div > input[type=checkbox] + label {
     border: solid 1px var(--blue);
@@ -317,18 +330,20 @@ h3{
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 80vh;
-    flex-shrink: 0;
+    padding: 20px;
+    flex-wrap: wrap;
     
 }
 .img-projeto{
    width: 50%;
    margin: auto;
+   max-width: 700px;
 }
 #project-section > article{ 
-    max-width: 600px;
-    width: 50%;
+    max-width: 500px;
+    width: 100%;
     margin: auto;
+    padding: 10px;
     
 }
 #project-section > article > h1{ 
@@ -354,7 +369,10 @@ h3{
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     z-index: 1;
+    background-color: var(--background);
+
 }
 
 #problem-section h1{
@@ -370,6 +388,7 @@ h3{
 }
 .problem-container{
     background-color: var(--background);
+    max-width: 1440px;
     width: 100%;
     padding: 10px 100px 0px 100px;
     display: flex;
@@ -377,6 +396,8 @@ h3{
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    flex-wrap: wrap;
+    
 }
 
 .problem-container > img{
@@ -417,7 +438,21 @@ h3{
     line-height: normal;
  
 }
+.card-container-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 120px;
+    z-index: 1000000;
+    background-color: #ffffff00;
+    
+
+}
 .card-container{
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -426,8 +461,6 @@ h3{
     gap: 5px;
     align-items: center;
     z-index: 100000;
-    background-color: #00000000;
-    width: 100%;
     
 }
 .card {
@@ -483,11 +516,7 @@ h3{
     font-weight: 500;
     line-height: normal;
 }
-.card-container-top{
-    position: relative;
-    bottom: 120px;
-    z-index: 1000000;
-}
+
 #jorney-section{
     z-index: 1;
     position: relative;
@@ -543,11 +572,17 @@ h3{
     flex-direction: row;
     flex-wrap: wrap;
 }
+.cards-jorney-container > li{
+    width: 30%; 
+    height: 77px;
+    flex-basis: calc(33.33% - 40px); 
+    margin: 20px;
+    box-sizing: border-box;
 
+}
 
 .cards-jorney-container > li > figure{
-    width: 320px;
-    height: 77px;
+    width: 100%;
     flex-shrink: 0;
     border-radius: 12px;
     border: 1px solid var(--grey-light);
@@ -555,18 +590,18 @@ h3{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 50px 20px 45px 20px;
-    margin: 20px;
+    padding: 20px;
     justify-content: center;
     gap: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.247);
+    transition: background-color 0.5s;
+
 
 }
 
 .cards-jorney-container > li > figure:hover{
    background-color: var(--hover);
    cursor: pointer;
-   transition: 2s;
 
 }
 .cards-jorney-container > li > figure > img{
@@ -627,15 +662,15 @@ h3{
     align-items: flex-start;
     border-radius: 2188px;
     background: radial-gradient(50% 50% at 50% 50%, #54B1EA 0%, rgba(84, 177, 234, 0.00) 100%);
-    justify-content: center;
+    justify-content: space-between;
     padding: 100px 0px 30px 0px ;
     position: relative;
     bottom: 220px;
     overflow: hidden;
 }
 #goals-section > img {
-    width: 500px;
-    align-self: flex-start;
+        width: 200px;
+        height: 50vh;
 }
 
 #goals-section > article  > h1 {
@@ -770,7 +805,12 @@ footer{
    #form-section{
     display: flex   ;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
+   .form-container  {
+    margin: 0;
+}
     .form-container > div {
         position: none;
     }
@@ -789,34 +829,116 @@ footer{
     
     }
     #cad{
+        width: 70%;
+    }
+
+    .card-container-top{
+        position: relative;
+        bottom: 60px;
+        z-index: 1000000;
+    }
+    #goals-section > img{
+        display: none;
+
+    }
+    .footer-container{
         width: 80%;
     }
-    
+    #project-section > article{ 
+        max-width: 900px;
+        width: 100%;
+    }
 }
 @media (max-width: 900px){
     html{
-        font-size: 40%;
+        font-size: 55%;
     }
-     .card-container{
-        flex-direction: column;
-     }
      .card-container-top{
-        bottom: 65px;
+        bottom: 0px;
         background-color: var(--background);
      }
       #jorney-section > header > div {
         display: none;
     }
+    #jorney-section{
+        bottom: 100px;
+    }
+    #goals-section{
+        bottom: 200px;
+    }
+    .form-container > div{
+        position: static;
+       
+    }
     
 }
 
+@media(max-width: 768px){
+    html{
+        font-size: 50%
+    }
+    footer{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .footer-container{
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+
+    }
+     .footer-container > hr{
+        transform: rotate(180deg);
+        width: 100%;
+
+    }
+    .footer-container > nav  {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-container > nav  > ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+   
+    }
+    .contatos{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+   
+    .problem-container > img{
+        width: 100%;
+    }
+    .problem-container > article{
+        width: 100%;
+        padding-bottom: 30px;
+    
+    }
+    .cards-jorney-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .cards-jorney-container > li {
+        width: 60%;
+    }
+   
+}
 
 @media (max-width: 425px){
+    html{
+        font-size: 40%;
+    }
+    #goals-section{
+        justify-content: center;
+    }
     #jorney-section > header > div {
         display: none;
-    }
-    html{
-        font-size: 30%;
     }
     .vetor{
         display: none;
@@ -830,16 +952,19 @@ footer{
         margin-top: 100px;
         width: 100%;
     }
-    .cad{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+
  
-     .top-bar > nav > ul, li, a{
+    .card-container{
+        flex-direction: column;
+    }
+    #cad{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+     .top-bar > nav {
         display: none;
     }
     .footer-container{
@@ -851,6 +976,25 @@ footer{
     #jorney-section > header > div {
         display: none;
     }
+    .img-projeto{
+        width: 100%;
+     }
+    
+     .problem-container > img{
+        width: 100%;
+    }
+    .problem-container > article{
+        width: 100%;
+    
+    }
+    
+    .card-container{
+        margin-top: 10px;
+    }
+    .input-container{
+        width: 100%;
+    }
+ 
 }
 
 
