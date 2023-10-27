@@ -33,6 +33,9 @@ html{
     scroll-behavior: smooth;
     width: 100%;
 }
+ul{
+    list-style: none;
+}
 .vector2{
     position: relative;
     top: 70px;
@@ -49,17 +52,20 @@ html{
     display: flex;
     font-size: 2rem;
     justify-content: space-around;
-    padding: 1rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
     align-items: center;
     border-bottom: var(--white);
+
 }
 .logo{
     width: 20rem;
+    margin-right: 10rem;
 }
 .banner{
     display: none;
 }
-.top-bar > nav > ul, li, a{
+.top-bar  nav > ul, .top-bar nav li, .top-bar  nav a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -67,14 +73,16 @@ html{
     color: var(--white);
     text-decoration: none;
     gap: 3rem;
-
 }
-.top-bar > nav > ul, li, a:hover{
-   color: var(--blue-light);
-   transition: 1s;
 
+.top-bar  nav > ul, .top-bar  nav li, .top-bar nav a:hover {
+    color: var(--blue-light);
+    transition: 1s;
 }
-.top-bar > button {
+a{
+    text-decoration: none;
+}
+.top-bar  button {
     background-color: var(--black);
     color: var(--white);
     font-weight: 700;
@@ -83,11 +91,10 @@ html{
     border-radius: 0.5rem;
 }
 
-.top-bar > button:hover {
+.top-bar button:hover {
     cursor: pointer;
     background-color: var(--black-light);
     transition: 1s;
-
 }
 
 #form-section{
@@ -144,7 +151,7 @@ html{
 .vetor{
     z-index: 20;
     width: 200px;
-    height: 570px;
+    height: 583px;
     position: relative;
     right: 15px;
 
@@ -517,7 +524,7 @@ h3{
     line-height: normal;
 }
 
-#jorney-section{
+#journey-section{
     z-index: 1;
     position: relative;
     bottom: 230px;
@@ -530,21 +537,22 @@ h3{
     align-items: center;
     padding-top: 180px;
     padding-bottom: 180px;
+    gap: 50px;
 
 }
-#jorney-section > header{
+#journey-section > header{
    display: flex;
    flex-direction: row;
    justify-content: center;
    align-items: center;
    text-align: center;
 }
-#jorney-section > header > div{
+#journey-section > header > div{
     display: flex;
     flex-direction: column;
     gap: 5px;
  }
-#jorney-section > header > h1{
+#journey-section > header > h1{
     text-align: center;
     font-size: 4rem;
     font-style: normal;
@@ -563,7 +571,7 @@ h3{
     height: 0px;
     background: linear-gradient(90deg, #CFCFCF 0%, rgba(207, 207, 207, 0.00) 100%);
 }
-.cards-jorney-container{
+.cards-journey-container{
     max-width: 1200px;
     width: 100%;
     display: flex;
@@ -572,7 +580,7 @@ h3{
     flex-direction: row;
     flex-wrap: wrap;
 }
-.cards-jorney-container > li{
+.cards-journey-container > li{
     width: 30%; 
     height: 77px;
     flex-basis: calc(33.33% - 40px); 
@@ -581,7 +589,7 @@ h3{
 
 }
 
-.cards-jorney-container > li > figure{
+.cards-journey-container > li > figure{
     width: 100%;
     flex-shrink: 0;
     border-radius: 12px;
@@ -599,12 +607,12 @@ h3{
 
 }
 
-.cards-jorney-container > li > figure:hover{
+.cards-journey-container > li > figure:hover{
    background-color: var(--hover);
    cursor: pointer;
 
 }
-.cards-jorney-container > li > figure > img{
+.cards-journey-container > li > figure > img{
     background-color: var(--white);
     border-radius: 20px;
     padding: 10px;
@@ -613,7 +621,7 @@ h3{
 }
 
 
-.cards-jorney-container > li > figure > figcaption{
+.cards-journey-container > li > figure > figcaption{
     color:var(--white);
     font-size: 1.6rem;
     font-style: normal;
@@ -621,18 +629,18 @@ h3{
     line-height: normal;
     
 }
-#jorney-section > button{
+#journey-section > button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 400px;
     height: 70px;
     flex-shrink: 0;
     border-radius: 12px;
     background: var(--black);
     color: white;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -641,7 +649,7 @@ h3{
 
 }
 
-#jorney-section > button > strong{
+#journey-section > button > strong{
     color: var(--blue);
     padding-right: 30px ;
     color: #319CDD;
@@ -651,7 +659,7 @@ h3{
     line-height: normal;
   
 }
-#jorney-section > button:hover{
+#journey-section > button:hover{
     background-color: var(--hover);
     cursor: pointer;
     transition: 0.8s;
@@ -857,10 +865,10 @@ footer{
         bottom: 0px;
         background-color: var(--background);
      }
-      #jorney-section > header > div {
+      #journey-section > header > div {
         display: none;
     }
-    #jorney-section{
+    #journey-section{
         bottom: 100px;
     }
     #goals-section{
@@ -872,10 +880,37 @@ footer{
     }
     
 }
+@media (min-width: 769px) {
+    .menu-mobile {
+        display: none; 
+    }
+    .show-menu-mobile {
+        display: flex; 
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
 
 @media(max-width: 768px){
     html{
         font-size: 50%
+    }
+    .top-bar > nav{
+        display: none;
+    }
+    .menu-mobile-icon{
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        background-repeat: no-repeat;
+        background-image: url(assets/bars-solid.svg);
+    }
+    .show-menu-mobile {
+        display: none;
     }
     footer{
         width: 100%;
@@ -920,11 +955,11 @@ footer{
         padding-bottom: 30px;
     
     }
-    .cards-jorney-container{
+    .cards-journey-container{
         flex-direction: column;
         width: 100%;
     }
-    .cards-jorney-container > li {
+    .cards-journey-container > li {
         width: 60%;
     }
    
@@ -937,7 +972,7 @@ footer{
     #goals-section{
         justify-content: center;
     }
-    #jorney-section > header > div {
+    #journey-section > header > div {
         display: none;
     }
     .vetor{
@@ -973,7 +1008,7 @@ footer{
     .footer-container > hr{
         transform: none;
     }
-    #jorney-section > header > div {
+    #journey-section > header > div {
         display: none;
     }
     .img-projeto{
